@@ -1,5 +1,5 @@
 class TicTacToe
-      def initialize(board)
+      def initialize(board = nil)
             @board = board || (Array.new(9," "))
       end
 
@@ -30,8 +30,8 @@ class TicTacToe
             @board[index] = current_player
       end
 
-      def position_taken?(board, location)
-      board[location] != " " && board[location] != ""
+      def position_taken?(location)
+            @board[location] != " " && @board[location] != ""
       end
 
       def valid_move?(index)
