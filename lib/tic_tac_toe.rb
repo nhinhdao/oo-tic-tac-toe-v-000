@@ -35,7 +35,7 @@ class TicTacToe
       end
 
       def valid_move?(index)
-            index.between?(0,8) && !position_taken?(@board, index)
+            index.between?(0,8) && !position_taken?(index)
       end
 
       def turn_count
@@ -43,7 +43,7 @@ class TicTacToe
       end
 
       def current_player
-      turn_count(@board) % 2 == 0 ? "X" : "O"
+      turn_count % 2 == 0 ? "X" : "O"
       end
 
       def turn
